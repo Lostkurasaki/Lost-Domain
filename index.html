@@ -133,11 +133,50 @@ body::before {
 
 <!-- HAFİF MOUSE TİLT -->
 <script>
+<script>
 document.addEventListener("mousemove", function(e) {
-  let x = (window.innerWidth / 2 - e.pageX) / 100; // daha az dönüş
-  let y = (window.innerHeight / 2 - e.pageY) / 100;
+  // Fare konumunu ekran ortasına göre hesapla
+  let centerX = window.innerWidth / 2;
+  let centerY = window.innerHeight / 2;
+
+  let deltaX = e.clientX - centerX;
+  let deltaY = e.clientY - centerY;
+
+  // Maksimum tilt açısı (derece)
+  let maxTilt = 10;
+
+  // Ekran boyutuna göre normalize et
+  let tiltX = (deltaY / centerY) * maxTilt; // yukarı-aşağı
+  let tiltY = -(deltaX / centerX) * maxTilt; // sağ-sol
+
+  // Her sectiona uygula
   document.querySelectorAll(".section").forEach(sec => {
-    sec.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+    sec.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+  });
+});
+</script>
+</script>
+document.addEventListener("mousemove", function(e) {
+  // Fare konumunu ekran ortasına göre hesapla
+  let centerX = window.innerWidth / 2;
+  let centerY = window.innerHeight / 2;
+
+  let deltaX = e.clientX - centerX;
+  let deltaY = e.clientY - centerY;
+
+  // Maksimum tilt açısı (derece)
+  let maxTilt = 10;
+
+  // Ekran boyutuna göre normalize et
+  let tiltX = (deltaY / centerY) * maxTilt; // yukarı-aşağı
+  let tiltY = -(deltaX / centerX) * maxTilt; // sağ-sol
+
+  // Her sectiona uygula
+  document.querySelectorAll(".section").forEach(sec => {
+    sec.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+  });
+});
+</script>
   });
 });
 </script>
