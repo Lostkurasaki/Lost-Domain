@@ -17,28 +17,31 @@ body {
 
 header {
   text-align: center;
-  font-size: 50px;
+  font-size: 60px; /* Başlık daha büyük */
   padding: 60px 20px;
   font-weight: bold;
   color: #ff1a1a;
   text-shadow: 0 0 20px #ff1a1a, 0 0 30px #ff0000;
 }
 
+/* Bölümler */
 .section {
   min-height: 100vh;
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
   background: rgba(26, 0, 0, 0.6);
   margin: 20px 0;
   transition: transform 0.2s ease;
 }
 
+/* Başlıklar */
 .section h1 {
-  font-size: 36px;
+  font-size: 32px; /* Daha okunaklı */
   margin-bottom: 40px;
   text-shadow: 0 0 15px #ff4c4c;
 }
 
+/* Kartlar */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -50,8 +53,9 @@ header {
   background: rgba(0,0,0,0.4);
   border: 2px solid #ff1a1a;
   border-radius: 15px;
-  padding: 30px;
+  padding: 40px; /* biraz daha büyük */
   width: 250px;
+  font-size: 22px; /* kart içi yazı büyütüldü */
   box-shadow: 0 0 30px #ff1a1a;
   transition: 0.3s;
 }
@@ -62,8 +66,8 @@ header {
 }
 
 .list-item {
-  margin: 10px 0;
-  font-size: 20px;
+  margin: 12px 0;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -79,7 +83,7 @@ body::before {
 
 @keyframes bgShift {
   0% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.1) rotate(3deg); }
+  50% { transform: scale(1.05) rotate(1deg); } /* Hafif eğim */
   100% { transform: scale(1) rotate(0deg); }
 }
 </style>
@@ -91,7 +95,7 @@ body::before {
 
 <div class="section">
   <h1>HAKKIMDA</h1>
-  <p>Merhabalar, LostKurasaki'nin Domain'ine hoş geldiniz. Burada benimle ilgili bilgiler bulabilirsiniz. Saygılarımla.</p>
+  <p style="font-size:20px;">Merhabalar, LostKurasaki'nin Domain'ine hoş geldiniz. Burada benimle ilgili bilgiler bulabilirsiniz. Saygılarımla.</p>
 </div>
 
 <div class="section">
@@ -111,7 +115,7 @@ body::before {
 
 <div class="section">
   <h1>MY BEST FRIEND</h1>
-  <p>SkyOfTheAbyss</p>
+  <p style="font-size:22px;">SkyOfTheAbyss</p>
   <h1>EN SEVDİĞİM ANİMELER</h1>
   <div class="cards">
     <div class="card">ONE PIECE</div>
@@ -127,10 +131,11 @@ body::before {
   <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
 </audio>
 
+<!-- HAFİF MOUSE TİLT -->
 <script>
 document.addEventListener("mousemove", function(e) {
-  let x = (window.innerWidth / 2 - e.pageX) / 50;
-  let y = (window.innerHeight / 2 - e.pageY) / 50;
+  let x = (window.innerWidth / 2 - e.pageX) / 100; // daha az dönüş
+  let y = (window.innerHeight / 2 - e.pageY) / 100;
   document.querySelectorAll(".section").forEach(sec => {
     sec.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   });
