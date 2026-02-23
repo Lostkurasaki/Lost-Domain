@@ -3,109 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lost Domain</title>
+<title>LOST DEVIL'S DOMAIN</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: radial-gradient(circle at center, #0f0f0f, #000000 80%);
-  color: white;
+  color: #ff4c4c;
   overflow-x: hidden;
+  background: linear-gradient(180deg, #000000 0%, #1a0000 100%);
+  perspective: 1000px;
 }
 
 header {
   text-align: center;
-  padding: 40px 20px;
-  font-size: 32px;
-  letter-spacing: 3px;
-  text-shadow: 0 0 15px cyan;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 60px;
-}
-
-.menu button {
-  padding: 15px 35px;
-  font-size: 16px;
-  background: rgba(0,255,255,0.1);
-  border: 1px solid cyan;
-  color: white;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: 0.3s ease;
-}
-
-.menu button:hover {
-  background: cyan;
-  color: black;
-  box-shadow: 0 0 20px cyan;
-  transform: scale(1.1);
+  font-size: 50px;
+  padding: 60px 20px;
+  font-weight: bold;
+  color: #ff1a1a;
+  text-shadow: 0 0 20px #ff1a1a, 0 0 30px #ff0000;
 }
 
 .section {
-  display: none;
-  max-width: 800px;
-  margin: auto;
-  padding: 30px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(0,255,255,0.3);
-  backdrop-filter: blur(10px);
-}
-
-.active {
-  display: block;
-}
-
-footer {
+  min-height: 100vh;
+  padding: 80px 20px;
   text-align: center;
-  margin-top: 80px;
-  padding: 20px;
-  opacity: 0.5;
+  background: rgba(26, 0, 0, 0.6);
+  margin: 20px 0;
+  transition: transform 0.2s ease;
+}
+
+.section h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 15px #ff4c4c;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: rgba(0,0,0,0.4);
+  border: 2px solid #ff1a1a;
+  border-radius: 15px;
+  padding: 30px;
+  width: 250px;
+  box-shadow: 0 0 30px #ff1a1a;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px #ff0000;
+}
+
+.list-item {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #1a0000, #000000);
+  z-index: -1;
+  animation: bgShift 10s linear infinite;
+}
+
+@keyframes bgShift {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(3deg); }
+  100% { transform: scale(1) rotate(0deg); }
 }
 </style>
 </head>
 
 <body>
 
-<header>🔥 LOST DEVIL'S DOMAIN 🔥</header>
+<header>LOST DEVIL'S DOMAIN</header>
 
-<div class="menu">
-  <button onclick="showSection('home')">Ana Menü</button>
-  <button onclick="showSection('about')">Hakkımda</button>
-  <button onclick="showSection('games')">Oyunlar</button>
+<div class="section">
+  <h1>HAKKIMDA</h1>
+  <p>Merhabalar, LostKurasaki'nin Domain'ine hoş geldiniz. Burada benimle ilgili bilgiler bulabilirsiniz. Saygılarımla.</p>
 </div>
 
-<div id="home" class="section active">
-  <h2>Hoş Geldin</h2>
-  <p>Bu site karanlık bir dijital evren. Oyun, kodlama ve chaos burada birleşiyor.</p>
+<div class="section">
+  <h1>OYUNLAR VE HOBİLER</h1>
+  <div class="cards">
+    <div class="card">Roblox</div>
+    <div class="card">Minecraft</div>
+    <div class="card">Valorant</div>
+  </div>
+  <h1>HOBİLER</h1>
+  <div class="cards">
+    <div class="card">Resim Çizmeyi Severim</div>
+    <div class="card">Anime İzlemeyi Severim</div>
+    <div class="card">Şarkı Dinlemeyi Severim</div>
+  </div>
 </div>
 
-<div id="about" class="section">
-  <h2>Hakkımda</h2>
-  <p>Ben Tayfun. 9. sınıf öğrencisiyim ve web + oyun dünyasına adım atıyorum. 
-  Dark temalar ve anime vibe seviyorum.</p>
+<div class="section">
+  <h1>MY BEST FRIEND</h1>
+  <p>SkyOfTheAbyss</p>
+  <h1>EN SEVDİĞİM ANİMELER</h1>
+  <div class="cards">
+    <div class="card">ONE PIECE</div>
+    <div class="card">HUNTERXHUNTER</div>
+    <div class="card">FATE ALL SERIES</div>
+    <div class="card">OSHI NOKO</div>
+    <div class="card">DEATH NOTE</div>
+  </div>
 </div>
 
-<div id="games" class="section">
-  <h2>Oyun Menüsü</h2>
-  <p>Yakında burada projelerim olacak.</p>
-</div>
-
-<footer>© 2026 Lost Domain</footer>
+<!-- ŞARKI -->
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
 
 <script>
-function showSection(id) {
-  document.querySelectorAll('.section').forEach(section => {
-    section.classList.remove('active');
+document.addEventListener("mousemove", function(e) {
+  let x = (window.innerWidth / 2 - e.pageX) / 50;
+  let y = (window.innerHeight / 2 - e.pageY) / 50;
+  document.querySelectorAll(".section").forEach(sec => {
+    sec.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   });
-  document.getElementById(id).classList.add('active');
-}
+});
 </script>
 
 </body>
