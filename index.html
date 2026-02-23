@@ -17,14 +17,13 @@ body {
 
 header {
   text-align: center;
-  font-size: 60px; /* Başlık daha büyük */
+  font-size: 60px;
   padding: 60px 20px;
   font-weight: bold;
   color: #ff1a1a;
   text-shadow: 0 0 20px #ff1a1a, 0 0 30px #ff0000;
 }
 
-/* Bölümler */
 .section {
   min-height: 100vh;
   padding: 100px 20px;
@@ -34,14 +33,12 @@ header {
   transition: transform 0.2s ease;
 }
 
-/* Başlıklar */
 .section h1 {
-  font-size: 32px; /* Daha okunaklı */
+  font-size: 32px;
   margin-bottom: 40px;
   text-shadow: 0 0 15px #ff4c4c;
 }
 
-/* Kartlar */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -53,9 +50,9 @@ header {
   background: rgba(0,0,0,0.4);
   border: 2px solid #ff1a1a;
   border-radius: 15px;
-  padding: 40px; /* biraz daha büyük */
+  padding: 40px;
   width: 250px;
-  font-size: 22px; /* kart içi yazı büyütüldü */
+  font-size: 22px;
   box-shadow: 0 0 30px #ff1a1a;
   transition: 0.3s;
 }
@@ -63,12 +60,6 @@ header {
 .card:hover {
   transform: scale(1.1);
   box-shadow: 0 0 50px #ff0000;
-}
-
-.list-item {
-  margin: 12px 0;
-  font-size: 22px;
-  font-weight: bold;
 }
 
 body::before {
@@ -83,7 +74,7 @@ body::before {
 
 @keyframes bgShift {
   0% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.05) rotate(1deg); } /* Hafif eğim */
+  50% { transform: scale(1.05) rotate(1deg); }
   100% { transform: scale(1) rotate(0deg); }
 }
 </style>
@@ -133,50 +124,16 @@ body::before {
 
 <!-- HAFİF MOUSE TİLT -->
 <script>
-<script>
 document.addEventListener("mousemove", function(e) {
-  // Fare konumunu ekran ortasına göre hesapla
   let centerX = window.innerWidth / 2;
   let centerY = window.innerHeight / 2;
-
   let deltaX = e.clientX - centerX;
   let deltaY = e.clientY - centerY;
-
-  // Maksimum tilt açısı (derece)
-  let maxTilt = 10;
-
-  // Ekran boyutuna göre normalize et
-  let tiltX = (deltaY / centerY) * maxTilt; // yukarı-aşağı
-  let tiltY = -(deltaX / centerX) * maxTilt; // sağ-sol
-
-  // Her sectiona uygula
+  let maxTilt = 8; // maksimum eğim derecesi
+  let tiltX = (deltaY / centerY) * maxTilt;
+  let tiltY = -(deltaX / centerX) * maxTilt;
   document.querySelectorAll(".section").forEach(sec => {
     sec.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-  });
-});
-</script>
-</script>
-document.addEventListener("mousemove", function(e) {
-  // Fare konumunu ekran ortasına göre hesapla
-  let centerX = window.innerWidth / 2;
-  let centerY = window.innerHeight / 2;
-
-  let deltaX = e.clientX - centerX;
-  let deltaY = e.clientY - centerY;
-
-  // Maksimum tilt açısı (derece)
-  let maxTilt = 10;
-
-  // Ekran boyutuna göre normalize et
-  let tiltX = (deltaY / centerY) * maxTilt; // yukarı-aşağı
-  let tiltY = -(deltaX / centerX) * maxTilt; // sağ-sol
-
-  // Her sectiona uygula
-  document.querySelectorAll(".section").forEach(sec => {
-    sec.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-  });
-});
-</script>
   });
 });
 </script>
