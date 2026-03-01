@@ -3,140 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LOST DEVIL'S DOMAIN</title>
+<title>Lost Devil's Domain</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #ff4c4c;
-  overflow-x: hidden;
-  background: linear-gradient(180deg, #000000 0%, #1a0000 100%);
-  perspective: 1000px;
+body{
+  margin:0;
+  background:#ffffff;
+  color:#000000;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-header {
-  text-align: center;
-  font-size: 60px;
-  padding: 60px 20px;
-  font-weight: bold;
-  color: #ff1a1a;
-  text-shadow: 0 0 20px #ff1a1a, 0 0 30px #ff0000;
+/* GENEL BÖLÜM STİLİ */
+.section{
+  padding:60px 20px;
+  text-align:center;
 }
 
-.section {
-  min-height: 100vh;
-  padding: 100px 20px;
-  text-align: center;
-  background: rgba(26, 0, 0, 0.6);
-  margin: 20px 0;
-  transition: transform 0.2s ease;
+/* GİRİŞ ALANI */
+.hero{
+  background:#000;
+  color:#fff;
+  padding:80px 20px;
 }
 
-.section h1 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  text-shadow: 0 0 15px #ff4c4c;
+/* VİDEO KUTUSU */
+.video-box{
+  width:80%;
+  max-width:1000px;
+  margin:40px auto;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+.video-box video{
+  width:100%;
+  display:block;
 }
 
-.card {
-  background: rgba(0,0,0,0.4);
-  border: 2px solid #ff1a1a;
-  border-radius: 15px;
-  padding: 40px;
-  width: 250px;
-  font-size: 22px;
-  box-shadow: 0 0 30px #ff1a1a;
-  transition: 0.3s;
+/* KARTLAR */
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  margin-top:40px;
 }
 
-.card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 50px #ff0000;
+.card{
+  background:#000;
+  color:#fff;
+  width:250px;
+  padding:20px;
+  border-radius:20px;
+  transition:0.3s;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, #1a0000, #000000);
-  z-index: -1;
-  animation: bgShift 10s linear infinite;
+.card:hover{
+  transform:scale(1.05);
 }
 
-@keyframes bgShift {
-  0% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.05) rotate(1deg); }
-  100% { transform: scale(1) rotate(0deg); }
+/* GÖRSEL YER TUTUCU */
+.image-placeholder{
+  width:100%;
+  height:150px;
+  background:#ddd;
+  border-radius:15px;
+  margin-bottom:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  color:#555;
 }
 </style>
 </head>
 
 <body>
 
-<header>LOST DEVIL'S DOMAIN</header>
+<!-- ================== GİRİŞ ================== -->
+<div class="section hero">
+  <h1>LOST DEVIL'S DOMAIN</h1>
+  <p>Hoş geldiniz...</p>
 
-<div class="section">
-  <h1>HAKKIMDA</h1>
-  <p style="font-size:20px;">Merhabalar, LostKurasaki'nin Domain'ine hoş geldiniz. Burada benimle ilgili bilgiler bulabilirsiniz. Burası benim özel alanımdır böyle şeylerde yeniyim ileride güncelleme yapacağım bu şimdilik raw halidir teşekkür ederim sağlıcakla kalın :D.</p>
+  <div class="video-box">
+    <video autoplay muted loop>
+      <source src="video.mp4" type="video/mp4">
+      Tarayıcın videoyu desteklemiyor.
+    </video>
+  </div>
+
+  <!-- BURAYA EKSTRA GÖRSEL EKLEYEBİLİRSİN -->
+  <!-- ÖRNEK:
+  <img src="resim1.jpg" style="width:300px; border-radius:20px;">
+  -->
 </div>
 
+<!-- ================== OYUNLAR ================== -->
 <div class="section">
-  <h1>OYUNLAR VE HOBİLER</h1>
+  <h2>Sevdiğim Oyunlar</h2>
+
   <div class="cards">
-    <div class="card">Roblox</div>
-    <div class="card">Minecraft</div>
-    <div class="card">Valorant</div>
-  </div>
-  <h1>HOBİLER</h1>
-  <div class="cards">
-    <div class="card">Resim Çizmeyi Severim</div>
-    <div class="card">Anime İzlemeyi Severim</div>
-    <div class="card">Şarkı Dinlemeyi Severim</div>
+
+    <div class="card">
+      <div class="image-placeholder">
+        BURAYA OYUN GÖRSELİ EKLE
+      </div>
+      Roblox
+    </div>
+
+    <div class="card">
+      <div class="image-placeholder">
+        BURAYA OYUN GÖRSELİ EKLE
+      </div>
+      Minecraft
+    </div>
+
+    <div class="card">
+      <div class="image-placeholder">
+        BURAYA OYUN GÖRSELİ EKLE
+      </div>
+      Valorant
+    </div>
+
   </div>
 </div>
 
-<div class="section">
-  <h1>MY BEST FRIEND</h1>
-  <p style="font-size:22px;">SkyOfTheAbyss</p>
-  <h1>EN SEVDİĞİM ANİMELER</h1>
+<!-- ================== ANİMELER ================== -->
+<div class="section" style="background:#000; color:#fff;">
+  <h2>Sevdiğim Animeler</h2>
+
   <div class="cards">
-    <div class="card">ONE PIECE</div>
-    <div class="card">HUNTERXHUNTER</div>
-    <div class="card">FATE ALL SERIES</div>
-    <div class="card">OSHI NOKO</div>
-    <div class="card">DEATH NOTE</div>
+
+    <div class="card" style="background:#fff; color:#000;">
+      <div class="image-placeholder">
+        BURAYA ANİME GÖRSELİ EKLE
+      </div>
+      Anime 1
+    </div>
+
+    <div class="card" style="background:#fff; color:#000;">
+      <div class="image-placeholder">
+        BURAYA ANİME GÖRSELİ EKLE
+      </div>
+      Anime 2
+    </div>
+
   </div>
 </div>
-
-<!-- ŞARKI -->
-<audio autoplay loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
-
-<!-- HAFİF MOUSE TİLT -->
-<script>
-document.addEventListener("mousemove", function(e) {
-  let centerX = window.innerWidth / 2;
-  let centerY = window.innerHeight / 2;
-  let deltaX = e.clientX - centerX;
-  let deltaY = e.clientY - centerY;
-  let maxTilt = 8; // maksimum eğim derecesi
-  let tiltX = (deltaY / centerY) * maxTilt;
-  let tiltY = -(deltaX / centerX) * maxTilt;
-  document.querySelectorAll(".section").forEach(sec => {
-    sec.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-  });
-});
-</script>
 
 </body>
 </html>
