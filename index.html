@@ -1,156 +1,267 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lost Devil's Domain</title>
 
 <style>
+
 body{
-  margin:0;
-  background:#ffffff;
-  color:#000000;
-  font-family:Arial, Helvetica, sans-serif;
+margin:0;
+font-family:Arial;
+background:#ffffff;
+color:#000;
 }
 
-/* GENEL BÖLÜM STİLİ */
-.section{
-  padding:60px 20px;
-  text-align:center;
+/* BAŞLIK */
+
+.header{
+text-align:center;
+padding:60px;
+background:black;
+color:white;
 }
 
-/* GİRİŞ ALANI */
-.hero{
-  background:#000;
-  color:#fff;
-  padding:80px 20px;
-}
+/* VİDEO */
 
-/* VİDEO KUTUSU */
 .video-box{
-  width:80%;
-  max-width:1000px;
-  margin:40px auto;
-  border-radius:25px;
-  overflow:hidden;
-  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+width:80%;
+margin:auto;
+margin-top:40px;
+border-radius:25px;
+overflow:hidden;
 }
 
 .video-box video{
-  width:100%;
-  display:block;
+width:100%;
+display:block;
 }
 
-/* KARTLAR */
+/* BÖLÜMLER */
+
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+/* OYUN LİSTESİ */
+
+.games{
+font-size:22px;
+line-height:45px;
+letter-spacing:2px;
+}
+
+/* ANİME KARTLARI */
+
 .cards{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-  margin-top:40px;
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
 }
 
 .card{
-  background:#000;
-  color:#fff;
-  width:250px;
-  padding:20px;
-  border-radius:20px;
-  transition:0.3s;
+width:220px;
+background:black;
+color:white;
+border-radius:20px;
+overflow:hidden;
 }
 
-.card:hover{
-  transform:scale(1.05);
+.card img{
+width:100%;
+height:150px;
+object-fit:cover;
 }
 
-/* GÖRSEL YER TUTUCU */
-.image-placeholder{
-  width:100%;
-  height:150px;
-  background:#ddd;
-  border-radius:15px;
-  margin-bottom:15px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:14px;
-  color:#555;
+.card p{
+padding:15px;
 }
+
+/* RESİM GALERİ */
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:40px;
+}
+
+.gallery img{
+width:250px;
+border-radius:20px;
+}
+
+/* FOOTER */
+
+.footer{
+background:black;
+color:white;
+text-align:center;
+padding:40px;
+margin-top:80px;
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- ================== GİRİŞ ================== -->
-<div class="section hero">
-  <h1>LOST DEVIL'S DOMAIN</h1>
-  <p>Hoş geldiniz...</p>
+<!-- ================= GİRİŞ ================= -->
 
-  <div class="video-box">
-    <video autoplay muted loop>
-      <source src="video.mp4" type="video/mp4">
-      Tarayıcın videoyu desteklemiyor.
-    </video>
-  </div>
+<div class="header">
 
-  <!-- BURAYA EKSTRA GÖRSEL EKLEYEBİLİRSİN -->
-  <!-- ÖRNEK:
-  <img src="resim1.jpg" style="width:300px; border-radius:20px;">
-  -->
+<h1>LOST DEVIL'S DOMAIN</h1>
+
+<p>
+Merhabalar. LostKurasaki'nin domainine hoş geldiniz.
+Burada benimle ilgili bazı bilgiler ve sevdiğim şeyleri bulabilirsiniz.
+Genelde oyun oynamayı, anime izlemeyi ve müzik dinlemeyi severim.
+Burası benim küçük dijital alanım.
+</p>
+
+<div class="video-box">
+
+<!-- BURAYA VİDEO KOY -->
+
+<video autoplay muted loop>
+<source src="video.mp4" type="video/mp4">
+</video>
+
 </div>
 
-<!-- ================== OYUNLAR ================== -->
+</div>
+
+<!-- ================= OYUNLAR ================= -->
+
 <div class="section">
-  <h2>Sevdiğim Oyunlar</h2>
 
-  <div class="cards">
+<h2>OYUNLAR</h2>
 
-    <div class="card">
-      <div class="image-placeholder">
-        https://teknodestek.com.tr/wp-content/uploads/2021/10/Roblox-grafik-surucusu-sorunlari-nasil-duzeltilir_kapak.jpg
-      </div>
-      Roblox
-    </div>
+<div class="games">
 
-    <div class="card">
-      <div class="image-placeholder">
-        BURAYA OYUN GÖRSELİ EKLE
-      </div>
-      Minecraft
-    </div>
+ROBLOX<br>
+MINECRAFT<br>
+VALORANT
 
-    <div class="card">
-      <div class="image-placeholder">
-        BURAYA OYUN GÖRSELİ EKLE
-      </div>
-      Valorant
-    </div>
-
-  </div>
 </div>
 
-<!-- ================== ANİMELER ================== -->
-<div class="section" style="background:#000; color:#fff;">
-  <h2>Sevdiğim Animeler</h2>
+</div>
 
-  <div class="cards">
+<!-- ================= HOBİLER ================= -->
 
-    <div class="card" style="background:#fff; color:#000;">
-      <div class="image-placeholder">
-        BURAYA ANİME GÖRSELİ EKLE
-      </div>
-      Anime 1
-    </div>
+<div class="section" style="background:#f3f3f3">
 
-    <div class="card" style="background:#fff; color:#000;">
-      <div class="image-placeholder">
-        BURAYA ANİME GÖRSELİ EKLE
-      </div>
-      Anime 2
-    </div>
+<h2>HOBİLER</h2>
 
-  </div>
+<p>
+
+Resim çizmeyi severim<br>
+Anime izlemeyi severim<br>
+Şarkı dinlemeyi severim
+
+</p>
+
+</div>
+
+<!-- ================= MY BEST FRIEND ================= -->
+
+<div class="section">
+
+<h2>MY BEST FRIEND</h2>
+
+<h3>SkyOfTheAbyss</h3>
+
+</div>
+
+<!-- ================= ANİMELER ================= -->
+
+<div class="section" style="background:black;color:white;">
+
+<h2>EN SEVDİĞİM ANİMELER</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<!-- BURAYA ANİME GÖRSELİ KOY -->
+
+<img src="anime1.jpg">
+
+<p>ONE PIECE</p>
+
+</div>
+
+<div class="card">
+
+<img src="anime2.jpg">
+
+<p>HUNTER X HUNTER</p>
+
+</div>
+
+<div class="card">
+
+<img src="anime3.jpg">
+
+<p>FATE SERIES</p>
+
+</div>
+
+<div class="card">
+
+<img src="anime4.jpg">
+
+<p>OSHI NO KO</p>
+
+</div>
+
+<div class="card">
+
+<img src="anime5.jpg">
+
+<p>DEATH NOTE</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= RESİM GALERİ ================= -->
+
+<div class="section">
+
+<h2>MY ART / MY IMAGES</h2>
+
+<p>Kendi yaptığım veya sevdiğim görseller.</p>
+
+<div class="gallery">
+
+<!-- BURAYA KENDİ RESİMLERİNİ EKLE -->
+
+<img src="resim1.jpg">
+<img src="resim2.jpg">
+<img src="resim3.jpg">
+
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<div class="footer">
+
+Lost Devil's Domain
+
 </div>
 
 </body>
+
 </html>
